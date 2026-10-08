@@ -1,602 +1,462 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Flores, Mark John | IT Professional Portfolio</title>
-  <meta name="description" content="Portfolio of Mark John Flores, an IT Specialist building PHP and MySQL systems, desktop applications, and providing hands-on hardware and technical support.">
-  <meta name="theme-color" content="#0d1220">
-  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark John Flores | IT Professional</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to main content</a>
+    <!-- Theme Toggle & Back to Top -->
+    <button id="theme-toggle" class="glass-button" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+    <button id="back-to-top" class="glass-button" aria-label="Back to Top"><i class="fas fa-arrow-up"></i></button>
 
-  <!-- Icon sprite, referenced by <use> elements elsewhere in the page -->
-  <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-    <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></symbol>
-    <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.7 4.53-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07Z"/></symbol>
-    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></symbol>
-    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
-    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></symbol>
-    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
-    <symbol id="i-code" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol>
-    <symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></symbol>
-    <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></symbol>
-    <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></symbol>
-    <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76Z"/></symbol>
-    <symbol id="i-film" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2.18"/><path d="M7 2v20M17 2v20M2 12h20M2 7h5M2 17h5M17 17h5M17 7h5"/></symbol>
-    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></symbol>
-    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></symbol>
-    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
-    <symbol id="i-external" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></symbol>
-    <symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></symbol>
-    <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
-    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11"/></symbol>
-    <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.47.98-1.21 1.21C7.85 18.75 7 20.24 7 22M14 14.66V17c0 .55.47.98 1.21 1.21C16.15 18.75 17 20.24 17 22M18 2H6v7a6 6 0 0 0 12 0V2Z"/></symbol>
-    <symbol id="i-check" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></symbol>
-    <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></symbol>
-  </svg>
+    <!-- Navigation -->
+    <header id="header">
+        <nav class="navbar container">
+            <a href="#home" class="logo">MJ<span>.Flores</span></a>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- ============ HEADER / NAVIGATION ============ -->
-  <header class="site-header" id="site-header">
-    <div class="container nav-bar">
-      <a class="brand" href="#home" aria-label="Mark John Flores, back to top">
-        <span class="brand-mark" aria-hidden="true">MJ</span>
-        <span class="brand-name">Mark John Flores</span>
-      </a>
-
-      <nav class="site-nav" aria-label="Primary">
-        <ul class="nav-links" id="nav-links">
-          <li><a class="nav-link" href="#home">Home</a></li>
-          <li><a class="nav-link" href="#about">About</a></li>
-          <li><a class="nav-link" href="#skills">Skills</a></li>
-          <li><a class="nav-link" href="#projects">Projects</a></li>
-          <li><a class="nav-link" href="#services">Services</a></li>
-          <li><a class="nav-link" href="#experience">Experience</a></li>
-          <li><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-
-      <div class="nav-actions">
-        <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light theme">
-          <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun"/></svg>
-          <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon"/></svg>
-        </button>
-        <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
-          <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <main id="main">
-
-    <!-- ============ HERO ============ -->
-    <section class="hero" id="home" aria-labelledby="hero-title">
-      <div class="hero-bg" aria-hidden="true">
-        <span class="hero-grid"></span>
-        <span class="orb orb--one"></span>
-        <span class="orb orb--two"></span>
-        <span class="orb orb--three"></span>
-      </div>
-
-      <div class="container hero-inner">
-        <div class="hero-copy">
-          <p class="hero-badge" data-hero style="--i:0">
-            <span class="status-dot" aria-hidden="true"></span>
-            IT PROFESSIONAL
-          </p>
-          <h1 class="hero-title" id="hero-title" data-hero style="--i:1">Flores, Mark John</h1>
-          <p class="hero-role" data-hero style="--i:2">
-            <span class="hero-role-prefix">I'm an</span>
-            <span class="typed" id="typed" aria-hidden="true">IT Specialist</span><span class="cursor" aria-hidden="true"></span>
-            <span class="sr-only">IT Specialist, web and software developer, hardware support specialist.</span>
-          </p>
-          <p class="hero-text" data-hero style="--i:3">
-            I turn messy, complex processes into clean, maintainable, high-performing code. From PHP and MySQL systems to Windows desktop apps and hands-on hardware support, I build tools that work on day one and keep working.
-          </p>
-          <div class="hero-cta" data-hero style="--i:4">
-            <a class="btn btn--primary" href="#projects">View My Work</a>
-            <a class="btn btn--ghost" href="#contact">Contact Me</a>
-          </div>
-          <ul class="social-list" aria-label="Social media" data-hero style="--i:5">
-            <li><a class="social-link" href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in a new tab)"><svg class="icon icon--solid" aria-hidden="true"><use href="#i-github"/></svg></a></li>
-            <li><a class="social-link" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)"><svg class="icon icon--solid" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
-            <li><a class="social-link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in a new tab)"><svg class="icon icon--solid" aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
-            <li><a class="social-link" href="mailto:ryuuflores2006@gmail.com" aria-label="Send an email"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></a></li>
-          </ul>
+    <!-- Hero Section -->
+    <section id="home" class="hero section">
+        <div class="hero-bg-animated">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
         </div>
-
-        <div class="hero-visual" data-hero style="--i:3">
-          <div class="portrait">
-            <img src="assets/images/profile.svg" alt="Portrait of Mark John Flores, IT Specialist" width="600" height="720" fetchpriority="high">
-          </div>
-          <div class="chip chip--one glass">
-            <svg class="icon" aria-hidden="true"><use href="#i-trophy"/></svg>
-            <span>Hackathon Champion</span>
-          </div>
-          <div class="chip chip--two glass">
-            <svg class="icon" aria-hidden="true"><use href="#i-award"/></svg>
-            <span>Civil Service Exam Passer</span>
-          </div>
-          <div class="chip chip--three glass">
-            <svg class="icon" aria-hidden="true"><use href="#i-database"/></svg>
-            <span>PHP + MySQL</span>
-          </div>
+        <div class="container hero-container grid-2">
+            <div class="hero-content fade-in">
+                <p class="greeting">Hello, World! I am</p>
+                <h1 class="name">Mark John <span>Flores</span></h1>
+                <h2 class="title">A passionate <span id="typing-text"></span><span class="cursor">|</span></h2>
+                <p class="description">
+                    Driven by the challenge of transforming messy, complex processes into clean, maintainable, and high-performing code.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper fade-in delay-1">
+                <div class="hero-image glass-card">
+                    <!-- Your Profile Image -->
+                    <img src="profile.jpg" alt="Mark John Flores" class="profile-img">
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- ============ ABOUT ============ -->
-    <section class="section section--alt" id="about" aria-labelledby="about-title">
-      <div class="container">
-        <header class="section-head" data-reveal="up">
-          <h2 class="section-title" id="about-title">About me</h2>
-          <p class="section-lead">A developer who also fixes the hardware it runs on.</p>
-        </header>
-
-        <div class="about-grid">
-          <figure class="about-figure" data-reveal="left">
-            <img src="assets/images/profile.svg" alt="Mark John Flores smiling in a professional portrait" width="600" height="720" loading="lazy">
-            <figcaption class="about-quote glass">
-              <q>Transforming messy, complex processes into clean, maintainable, and high-performing code.</q>
-            </figcaption>
-          </figure>
-
-          <div class="about-copy" data-reveal="right">
-            <h3 class="about-heading">Hello! I'm Mark John Flores.</h3>
-            <p>I'm a driven IT Specialist dedicated to turning messy, complex processes into clean, maintainable, and high-performing code. My journey in tech is fueled by a mix of disciplined execution and creative problem-solving.</p>
-            <p>I'm pursuing a Bachelor of Science in Information Technology while building web applications, desktop systems, and database-driven tools. Outside of coursework, I work as a freelance technical and hardware support specialist, diagnosing devices, servicing firmware, and helping clients upgrade their PCs.</p>
-
-            <dl class="facts">
-              <div class="fact"><dt>Location</dt><dd>Dullao, Bambang, Nueva Vizcaya</dd></div>
-              <div class="fact"><dt>Education</dt><dd>BSIT, Kings College of the Philippines (2028)</dd></div>
-              <div class="fact"><dt>Focus</dt><dd>PHP, MySQL, C#, VB.NET, hardware support</dd></div>
-              <div class="fact"><dt>Email</dt><dd><a href="mailto:ryuuflores2006@gmail.com">ryuuflores2006@gmail.com</a></dd></div>
-            </dl>
-          </div>
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>About <span>Me</span></h2>
+                <p>My journey in tech is fueled by a mix of disciplined execution and creative problem-solving.</p>
+            </div>
+            <div class="about-content grid-2 reveal delay-1">
+                <div class="about-text glass-card">
+                    <h3>IT Specialist & Developer</h3>
+                    <p>Hello! I'm Mark John Flores, a driven IT Specialist from Dullao, Bambang, Nueva Vizcaya. Currently pursuing my Bachelor of Science in Information Technology at Kings College of the Philippines (Expected 2028).</p>
+                    <p>I specialize in building full-stack web applications, engineering robust databases, and providing top-tier technical and hardware support. My hybrid expertise allows me to understand systems from the hardware foundation up to the software interface layer.</p>
+                    <div class="contact-info-short">
+                        <p><i class="fas fa-envelope"></i> ryuuflores2006@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> 09460086428</p>
+                    </div>
+                </div>
+                <div class="about-stats grid-2">
+                    <div class="stat-box glass-card">
+                        <h3 class="counter" data-target="3">0</h3>
+                        <p>Years of Experience</p>
+                    </div>
+                    <div class="stat-box glass-card">
+                        <h3 class="counter" data-target="15">0</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat-box glass-card">
+                        <h3 class="counter" data-target="12">0</h3>
+                        <p>Technologies Used</p>
+                    </div>
+                    <div class="stat-box glass-card">
+                        <h3 class="counter" data-target="4">0</h3>
+                        <p>Systems Completed</p>
+                    </div>
+                    <div class="stat-box glass-card span-2 highlight">
+                        <div class="achievements">
+                            <span class="badge"><i class="fas fa-trophy"></i> Hackathon Champion</span>
+                            <span class="badge"><i class="fas fa-award"></i> Civil Service Exam Passer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="stats" aria-label="Career highlights">
-          <article class="stat glass" data-reveal="up" style="--delay:0s">
-            <p class="stat-value"><span data-counter data-target="3" data-suffix="+">3+</span></p>
-            <p class="stat-label">Years of Experience</p>
-          </article>
-          <article class="stat glass" data-reveal="up" style="--delay:.08s">
-            <p class="stat-value"><span data-counter data-target="12" data-suffix="+">12+</span></p>
-            <p class="stat-label">Projects Completed</p>
-          </article>
-          <article class="stat glass" data-reveal="up" style="--delay:.16s">
-            <p class="stat-value"><span data-counter data-target="15" data-suffix="+">15+</span></p>
-            <p class="stat-label">Technologies Used</p>
-          </article>
-          <article class="stat glass" data-reveal="up" style="--delay:.24s">
-            <p class="stat-value"><span data-counter data-target="8" data-suffix="+">8+</span></p>
-            <p class="stat-label">Systems Completed</p>
-          </article>
-          <article class="stat glass" data-reveal="up" style="--delay:.32s">
-            <p class="stat-value"><span data-counter data-target="1" data-suffix="x">1x</span></p>
-            <p class="stat-label">Hackathon Champion</p>
-          </article>
-          <article class="stat glass" data-reveal="up" style="--delay:.4s">
-            <p class="stat-value">Passed</p>
-            <p class="stat-label">Civil Service Exam Passer</p>
-          </article>
-          <article class="stat glass" data-reveal="up" style="--delay:.48s">
-            <p class="stat-value"><span data-counter data-target="100" data-suffix="%">100%</span></p>
-            <p class="stat-label">Continuous Learning</p>
-          </article>
-        </div>
-      </div>
     </section>
 
-    <!-- ============ SKILLS ============ -->
-    <section class="section" id="skills" aria-labelledby="skills-title">
-      <div class="container">
-        <header class="section-head" data-reveal="up">
-          <h2 class="section-title" id="skills-title">Skills</h2>
-          <p class="section-lead">Tools I use to build, ship, and support working systems.</p>
-        </header>
-
-        <div class="skills-grid">
-          <article class="skill-card glass" data-reveal="up" style="--delay:0s">
-            <div class="skill-head">
-              <span class="skill-icon"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></span>
-              <h3>Languages &amp; Web</h3>
+    <!-- Skills Section -->
+    <section id="skills" class="skills section bg-alt">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>My <span>Skills</span></h2>
+                <p>A comprehensive toolkit for full-stack development and IT infrastructure.</p>
             </div>
-            <ul class="skill-list">
-              <li class="skill-row"><div class="skill-meta"><span>HTML5</span><span>92%</span></div><div class="bar" role="progressbar" aria-label="HTML5 proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="92"><span class="bar-fill" style="--level:92%"></span></div></li>
-              <li class="skill-row"><div class="skill-meta"><span>CSS3</span><span>88%</span></div><div class="bar" role="progressbar" aria-label="CSS3 proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="88"><span class="bar-fill" style="--level:88%"></span></div></li>
-              <li class="skill-row"><div class="skill-meta"><span>JavaScript</span><span>82%</span></div><div class="bar" role="progressbar" aria-label="JavaScript proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="82"><span class="bar-fill" style="--level:82%"></span></div></li>
-              <li class="skill-row"><div class="skill-meta"><span>PHP</span><span>85%</span></div><div class="bar" role="progressbar" aria-label="PHP proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85"><span class="bar-fill" style="--level:85%"></span></div></li>
-              <li class="skill-row"><div class="skill-meta"><span>C#</span><span>75%</span></div><div class="bar" role="progressbar" aria-label="C sharp proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="75"><span class="bar-fill" style="--level:75%"></span></div></li>
-              <li class="skill-row"><div class="skill-meta"><span>Visual Basic (.NET)</span><span>78%</span></div><div class="bar" role="progressbar" aria-label="Visual Basic proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="78"><span class="bar-fill" style="--level:78%"></span></div></li>
-              <li class="skill-row"><div class="skill-meta"><span>Python</span><span>60%</span></div><div class="bar" role="progressbar" aria-label="Python proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60"><span class="bar-fill" style="--level:60%"></span></div></li>
-            </ul>
-          </article>
-
-          <article class="skill-card glass" data-reveal="up" style="--delay:.1s">
-            <div class="skill-head">
-              <span class="skill-icon"><svg class="icon" aria-hidden="true"><use href="#i-database"/></svg></span>
-              <h3>Databases &amp; Tools</h3>
+            <div class="skills-grid reveal delay-1">
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-code"></i> Languages & Web</h3>
+                    <div class="skill-tags">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>PHP</span>
+                        <span>C#</span>
+                        <span>Visual Basic (.NET)</span>
+                        <span>Python</span>
+                    </div>
+                </div>
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-database"></i> Databases & Tools</h3>
+                    <div class="skill-tags">
+                        <span>MySQL</span>
+                        <span>phpMyAdmin</span>
+                        <span>XAMPP</span>
+                        <span>Visual Studio</span>
+                        <span>Git & GitHub</span>
+                        <span>GitHub Pages</span>
+                    </div>
+                </div>
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-server"></i> Technical & Hardware</h3>
+                    <div class="skill-tags">
+                        <span>PC Assembly</span>
+                        <span>Hardware Troubleshooting</span>
+                        <span>Device Flashing</span>
+                        <span>Firmware Servicing</span>
+                        <span>NFC Tag Config</span>
+                        <span>Networking</span>
+                    </div>
+                </div>
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-photo-video"></i> Multimedia</h3>
+                    <div class="skill-tags">
+                        <span>CapCut Editing</span>
+                        <span>Audio/Video Processing</span>
+                        <span>Content Preparation</span>
+                        <span>UI/UX Design</span>
+                    </div>
+                </div>
             </div>
-            <ul class="skill-list">
-              <li class="skill-row"><div class="skill-meta"><span>MySQL / phpMyAdmin</span><span>88%</span></div><div class="bar" role="progressbar" aria-label="MySQL proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="88"><span class="bar-fill" style="--level:88%"></span></div></li>
-              <li class="skill-row"><div class="skill-meta"><span>XAMPP</span><span>90%</span></div><div class="bar" role="progressbar" aria-label="XAMPP proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="90"><span class="bar-fill" style="--level:90%"></span></div></li>
-              <li class="skill-row"><div class="skill-meta"><span>Visual Studio</span><span>82%</span></div><div class="bar" role="progressbar" aria-label="Visual Studio proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="82"><span class="bar-fill" style="--level:82%"></span></div></li>
-              <li class="skill-row"><div class="skill-meta"><span>Git &amp; GitHub</span><span>80%</span></div><div class="bar" role="progressbar" aria-label="Git and GitHub proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80"><span class="bar-fill" style="--level:80%"></span></div></li>
-              <li class="skill-row"><div class="skill-meta"><span>GitHub Pages</span><span>85%</span></div><div class="bar" role="progressbar" aria-label="GitHub Pages proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85"><span class="bar-fill" style="--level:85%"></span></div></li>
-            </ul>
-          </article>
-
-          <article class="skill-card glass" data-reveal="up" style="--delay:.2s">
-            <div class="skill-head">
-              <span class="skill-icon"><svg class="icon" aria-hidden="true"><use href="#i-cpu"/></svg></span>
-              <h3>Technical &amp; Hardware Support</h3>
-            </div>
-            <ul class="skill-list">
-              <li class="skill-row"><div class="skill-meta"><span>PC Assembly &amp; Troubleshooting</span><span>90%</span></div><div class="bar" role="progressbar" aria-label="PC assembly proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="90"><span class="bar-fill" style="--level:90%"></span></div></li>
-              <li class="skill-row"><div class="skill-meta"><span>Device Flashing &amp; Firmware</span><span>85%</span></div><div class="bar" role="progressbar" aria-label="Firmware servicing proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85"><span class="bar-fill" style="--level:85%"></span></div></li>
-              <li class="skill-row"><div class="skill-meta"><span>NFC Tag Configuration</span><span>80%</span></div><div class="bar" role="progressbar" aria-label="NFC configuration proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80"><span class="bar-fill" style="--level:80%"></span></div></li>
-              <li class="skill-row"><div class="skill-meta"><span>Networking</span><span>72%</span></div><div class="bar" role="progressbar" aria-label="Networking proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="72"><span class="bar-fill" style="--level:72%"></span></div></li>
-            </ul>
-          </article>
-
-          <article class="skill-card glass" data-reveal="up" style="--delay:.3s">
-            <div class="skill-head">
-              <span class="skill-icon"><svg class="icon" aria-hidden="true"><use href="#i-film"/></svg></span>
-              <h3>Multimedia</h3>
-            </div>
-            <ul class="skill-list">
-              <li class="skill-row"><div class="skill-meta"><span>Audio/Video Editing (CapCut)</span><span>85%</span></div><div class="bar" role="progressbar" aria-label="CapCut proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85"><span class="bar-fill" style="--level:85%"></span></div></li>
-              <li class="skill-row"><div class="skill-meta"><span>Multimedia Content Preparation</span><span>80%</span></div><div class="bar" role="progressbar" aria-label="Multimedia preparation proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80"><span class="bar-fill" style="--level:80%"></span></div></li>
-            </ul>
-            <p class="tags-title">Also working with</p>
-            <ul class="tag-list">
-              <li>Windows Forms</li>
-              <li>CRUD Operations</li>
-              <li>Responsive Design</li>
-              <li>Object-Oriented Programming</li>
-              <li>OS Installation</li>
-              <li>Information Security</li>
-            </ul>
-          </article>
         </div>
-      </div>
     </section>
 
-    <!-- ============ PROJECTS ============ -->
-    <section class="section section--alt" id="projects" aria-labelledby="projects-title">
-      <div class="container">
-        <header class="section-head" data-reveal="up">
-          <h2 class="section-title" id="projects-title">Projects</h2>
-          <p class="section-lead">Systems built from the database up, with real workflows behind them.</p>
-        </header>
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Featured <span>Projects</span></h2>
+                <p>Showcasing my latest software, web, and system developments.</p>
+            </div>
+            
+            <div class="project-filters reveal delay-1">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web App</button>
+                <button class="filter-btn" data-filter="desktop">Desktop App</button>
+                <button class="filter-btn" data-filter="system">Systems</button>
+            </div>
 
-        <div class="filters" role="group" aria-label="Filter projects by category" data-reveal="up">
-          <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">All</button>
-          <button class="filter-btn" type="button" data-filter="web" aria-pressed="false">Web</button>
-          <button class="filter-btn" type="button" data-filter="desktop" aria-pressed="false">Desktop</button>
-          <button class="filter-btn" type="button" data-filter="database" aria-pressed="false">Database</button>
-          <button class="filter-btn" type="button" data-filter="hardware" aria-pressed="false">Hardware</button>
+            <div class="projects-grid reveal delay-2">
+                <!-- Project 1 -->
+                <div class="project-card glass-card" data-category="system web">
+                    <div class="project-img">
+                        <div class="img-placeholder"><i class="fas fa-boxes"></i></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Inventory & Stock Management</h3>
+                        <p>End-to-end inventory tracking system with real-time stock deductions, low-stock alerts, and admin dashboard reports.</p>
+                        <div class="tech-stack">
+                            <span>PHP</span><span>MySQL</span><span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-sm btn-outline"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" class="btn btn-sm btn-primary"><i class="fab fa-github"></i> Source</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card glass-card" data-category="web system">
+                    <div class="project-img">
+                        <div class="img-placeholder"><i class="fas fa-search-location"></i></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Campus Lost & Found System</h3>
+                        <p>Full-stack web portal for reporting, cataloging, and claiming lost items on campus with image handling and status tracking.</p>
+                        <div class="tech-stack">
+                            <span>PHP</span><span>MySQL</span><span>XAMPP</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-sm btn-outline"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" class="btn btn-sm btn-primary"><i class="fab fa-github"></i> Source</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card glass-card" data-category="desktop system">
+                    <div class="project-img">
+                        <div class="img-placeholder"><i class="fas fa-cash-register"></i></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Restaurant POS System</h3>
+                        <p>Desktop Point of Sale application featuring role authentication, dynamic ordering, bill calculations, and daily transaction logs.</p>
+                        <div class="tech-stack">
+                            <span>C#</span><span>Visual Basic</span><span>MySQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-sm btn-primary"><i class="fab fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card glass-card" data-category="web">
+                    <div class="project-img">
+                        <div class="img-placeholder"><i class="fas fa-globe"></i></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Interactive Web Portals</h3>
+                        <p>Lightweight, responsive interactive web pages designed with clean UI/UX principles and hosted live via GitHub Pages.</p>
+                        <div class="tech-stack">
+                            <span>HTML5</span><span>CSS3</span><span>JS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-sm btn-outline"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" class="btn btn-sm btn-primary"><i class="fab fa-github"></i> Source</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card glass-card" data-category="system">
+                    <div class="project-img">
+                        <div class="img-placeholder"><i class="fas fa-mobile-alt"></i></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Device Diagnostics Utility</h3>
+                        <p>Internal tool documentation and scripts for mobile device firmware flashing, software-level repairs, and NFC configuration.</p>
+                        <div class="tech-stack">
+                            <span>Python</span><span>Hardware</span><span>NFC</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-sm btn-primary"><i class="fab fa-github"></i> Documentation</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card glass-card" data-category="web">
+                    <div class="project-img">
+                        <div class="img-placeholder"><i class="fas fa-user-graduate"></i></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Academic Resource Dashboard</h3>
+                        <p>Centralized hub built during coursework to track database management models, OOP milestones, and multimedia files.</p>
+                        <div class="tech-stack">
+                            <span>PHP</span><span>MySQL</span><span>CSS3</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-sm btn-outline"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" class="btn btn-sm btn-primary"><i class="fab fa-github"></i> Source</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="projects-grid" id="projects-grid">
-          <article class="project-card glass" data-category="web database" data-reveal="scale">
-            <div class="project-media"><img src="assets/images/project-inventory.svg" alt="Dashboard of the inventory system showing stock tiles, a sales chart, and a movement log" width="800" height="500" loading="lazy"></div>
-            <div class="project-body">
-              <h3 class="project-title">Inventory &amp; Stock Management System</h3>
-              <p class="project-text">An end-to-end tracker for product stock, categories, and suppliers. Orders deduct stock in real time, low-stock alerts fire at set thresholds, and an admin dashboard shows restock history, item movement logs, and summary reports.</p>
-              <ul class="tag-list" aria-label="Technologies used">
-                <li>PHP / C#</li><li>MySQL</li><li>phpMyAdmin</li><li>HTML/CSS</li><li>JavaScript</li>
-              </ul>
-              <div class="project-actions">
-                <a class="btn btn--small btn--primary" href="https://github.com/" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>Live Demo<span class="sr-only"> of Inventory and Stock Management System (opens in a new tab)</span></a>
-                <a class="btn btn--small btn--ghost" href="https://github.com/" target="_blank" rel="noopener noreferrer"><svg class="icon icon--solid" aria-hidden="true"><use href="#i-github"/></svg>Source Code<span class="sr-only"> of Inventory and Stock Management System (opens in a new tab)</span></a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card glass" data-category="web database" data-reveal="scale" style="--delay:.08s">
-            <div class="project-media"><img src="assets/images/project-lost-found.svg" alt="Lost and found portal showing a search bar and a grid of reported items with status labels" width="800" height="500" loading="lazy"></div>
-            <div class="project-body">
-              <h3 class="project-title">Campus Lost &amp; Found Management System</h3>
-              <p class="project-text">A full-stack web portal for reporting, cataloging, and claiming lost items on campus. It includes an administrative dashboard, image upload handling, and relational queries that track each item's status from reported to claimed.</p>
-              <ul class="tag-list" aria-label="Technologies used">
-                <li>PHP</li><li>MySQL</li><li>JavaScript</li><li>HTML/CSS</li><li>XAMPP</li>
-              </ul>
-              <div class="project-actions">
-                <a class="btn btn--small btn--primary" href="https://github.com/" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>Live Demo<span class="sr-only"> of Campus Lost and Found Management System (opens in a new tab)</span></a>
-                <a class="btn btn--small btn--ghost" href="https://github.com/" target="_blank" rel="noopener noreferrer"><svg class="icon icon--solid" aria-hidden="true"><use href="#i-github"/></svg>Source Code<span class="sr-only"> of Campus Lost and Found Management System (opens in a new tab)</span></a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card glass" data-category="desktop database" data-reveal="scale" style="--delay:.16s">
-            <div class="project-media"><img src="assets/images/project-pos.svg" alt="Restaurant point of sale screen with menu tiles on the left and an itemized bill on the right" width="800" height="500" loading="lazy"></div>
-            <div class="project-body">
-              <h3 class="project-title">Restaurant POS &amp; Order Management</h3>
-              <p class="project-text">A desktop point-of-sale application with role-based login, dynamic menu ordering, and automatic bill calculation. It connects to a database to track inventory updates and daily transaction records.</p>
-              <ul class="tag-list" aria-label="Technologies used">
-                <li>Visual Basic</li><li>C#</li><li>Windows Forms</li><li>MySQL</li><li>phpMyAdmin</li>
-              </ul>
-              <div class="project-actions">
-                <a class="btn btn--small btn--primary" href="https://github.com/" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>Live Demo<span class="sr-only"> of Restaurant POS and Order Management (opens in a new tab)</span></a>
-                <a class="btn btn--small btn--ghost" href="https://github.com/" target="_blank" rel="noopener noreferrer"><svg class="icon icon--solid" aria-hidden="true"><use href="#i-github"/></svg>Source Code<span class="sr-only"> of Restaurant POS and Order Management (opens in a new tab)</span></a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card glass" data-category="web" data-reveal="scale">
-            <div class="project-media"><img src="assets/images/project-web-portals.svg" alt="Responsive web page with a navigation bar, hero headline, and three feature cards" width="800" height="500" loading="lazy"></div>
-            <div class="project-body">
-              <h3 class="project-title">Interactive Web Portals &amp; Deployments</h3>
-              <p class="project-text">Lightweight, responsive interactive pages published live on GitHub Pages. Each repository keeps a structured version history with clear branch and release tracking.</p>
-              <ul class="tag-list" aria-label="Technologies used">
-                <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>GitHub Pages</li><li>Git</li>
-              </ul>
-              <div class="project-actions">
-                <a class="btn btn--small btn--primary" href="https://pages.github.com/" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>Live Demo<span class="sr-only"> of Interactive Web Portals (opens in a new tab)</span></a>
-                <a class="btn btn--small btn--ghost" href="https://github.com/" target="_blank" rel="noopener noreferrer"><svg class="icon icon--solid" aria-hidden="true"><use href="#i-github"/></svg>Source Code<span class="sr-only"> of Interactive Web Portals (opens in a new tab)</span></a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card glass" data-category="desktop database" data-reveal="scale" style="--delay:.08s">
-            <div class="project-media"><img src="assets/images/project-records.svg" alt="Student records desktop application with a data table and an entry form" width="800" height="500" loading="lazy"></div>
-            <div class="project-body">
-              <h3 class="project-title">Student Records Management System</h3>
-              <p class="project-text">A Windows Forms application for enrolling students, managing records, and searching by name, course, or status. Normalized tables and validated input keep the data clean as it grows.</p>
-              <ul class="tag-list" aria-label="Technologies used">
-                <li>C#</li><li>Windows Forms</li><li>MySQL</li><li>Visual Studio</li>
-              </ul>
-              <div class="project-actions">
-                <a class="btn btn--small btn--primary" href="https://github.com/" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>Live Demo<span class="sr-only"> of Student Records Management System (opens in a new tab)</span></a>
-                <a class="btn btn--small btn--ghost" href="https://github.com/" target="_blank" rel="noopener noreferrer"><svg class="icon icon--solid" aria-hidden="true"><use href="#i-github"/></svg>Source Code<span class="sr-only"> of Student Records Management System (opens in a new tab)</span></a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card glass" data-category="hardware" data-reveal="scale" style="--delay:.16s">
-            <div class="project-media"><img src="assets/images/project-nfc.svg" alt="Phone reading an NFC tag with signal arcs between them" width="800" height="500" loading="lazy"></div>
-            <div class="project-body">
-              <h3 class="project-title">NFC Tag Automation Toolkit</h3>
-              <p class="project-text">A set of configured NFC tags that trigger phone actions with a single tap, such as opening links, joining Wi-Fi, or starting routines, documented step by step so clients can repeat the setup.</p>
-              <ul class="tag-list" aria-label="Technologies used">
-                <li>NFC Configuration</li><li>Android</li><li>Documentation</li>
-              </ul>
-              <div class="project-actions">
-                <a class="btn btn--small btn--primary" href="https://github.com/" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>Live Demo<span class="sr-only"> of NFC Tag Automation Toolkit (opens in a new tab)</span></a>
-                <a class="btn btn--small btn--ghost" href="https://github.com/" target="_blank" rel="noopener noreferrer"><svg class="icon icon--solid" aria-hidden="true"><use href="#i-github"/></svg>Source Code<span class="sr-only"> of NFC Tag Automation Toolkit (opens in a new tab)</span></a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
     </section>
 
-    <!-- ============ SERVICES ============ -->
-    <section class="section" id="services" aria-labelledby="services-title">
-      <div class="container">
-        <header class="section-head" data-reveal="up">
-          <h2 class="section-title" id="services-title">Services</h2>
-          <p class="section-lead">Practical IT help for individuals, schools, and small businesses.</p>
-        </header>
-
-        <div class="services-grid">
-          <article class="service-card glass" data-reveal="up" style="--delay:0s">
-            <span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></span>
-            <h3>Web Development</h3>
-            <p>Responsive, accessible websites and web portals, built with clean HTML, CSS, JavaScript, and PHP, and deployed so they are easy to maintain.</p>
-          </article>
-          <article class="service-card glass" data-reveal="up" style="--delay:.08s">
-            <span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-database"/></svg></span>
-            <h3>Database Development</h3>
-            <p>Relational MySQL designs with sensible structure, secure queries, and backups, ready to support reports and day-to-day operations.</p>
-          </article>
-          <article class="service-card glass" data-reveal="up" style="--delay:.16s">
-            <span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-cpu"/></svg></span>
-            <h3>System Development</h3>
-            <p>Custom inventory, point-of-sale, and records systems for web and Windows desktop, with login roles, CRUD tools, and admin dashboards.</p>
-          </article>
-          <article class="service-card glass" data-reveal="up" style="--delay:.24s">
-            <span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-wifi"/></svg></span>
-            <h3>Network Setup</h3>
-            <p>Home and small-office network configuration, covering device connections, shared resources, and basic troubleshooting for stable connectivity.</p>
-          </article>
-          <article class="service-card glass" data-reveal="up" style="--delay:.32s">
-            <span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-wrench"/></svg></span>
-            <h3>IT Support</h3>
-            <p>PC assembly, hardware upgrades, compatibility checks, operating system installs, and mobile device diagnostics and firmware servicing.</p>
-          </article>
-          <article class="service-card glass" data-reveal="up" style="--delay:.4s">
-            <span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-film"/></svg></span>
-            <h3>Multimedia Preparation</h3>
-            <p>Audio and video editing with CapCut and content preparation for presentations, school requirements, and social media.</p>
-          </article>
+    <!-- Services Section -->
+    <section id="services" class="services section bg-alt">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>My <span>Services</span></h2>
+                <p>Delivering comprehensive IT solutions for modern problems.</p>
+            </div>
+            <div class="services-grid reveal delay-1">
+                <div class="service-card glass-card">
+                    <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Web Development</h3>
+                    <p>Responsive, fast, and modern front-end and back-end web applications tailored to your business needs.</p>
+                </div>
+                <div class="service-card glass-card">
+                    <div class="service-icon"><i class="fas fa-database"></i></div>
+                    <h3>Database Development</h3>
+                    <p>Design, optimization, and management of secure relational databases using MySQL and phpMyAdmin.</p>
+                </div>
+                <div class="service-card glass-card">
+                    <div class="service-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>System Development</h3>
+                    <p>Custom desktop applications (C#/VB.NET), inventory management, and POS systems optimized for workflow efficiency.</p>
+                </div>
+                <div class="service-card glass-card">
+                    <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3>Network Setup</h3>
+                    <p>Reliable configuration and troubleshooting of local networks to ensure seamless data flow and security.</p>
+                </div>
+                <div class="service-card glass-card">
+                    <div class="service-icon"><i class="fas fa-tools"></i></div>
+                    <h3>IT & Hardware Support</h3>
+                    <p>PC assembly, hardware troubleshooting, OS installations, device flashing, and software-level repairs.</p>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- ============ EXPERIENCE / TIMELINE ============ -->
-    <section class="section section--alt" id="experience" aria-labelledby="experience-title">
-      <div class="container">
-        <header class="section-head" data-reveal="up">
-          <h2 class="section-title" id="experience-title">Experience &amp; education</h2>
-          <p class="section-lead">Where I've studied, worked, built, and been recognized.</p>
-        </header>
+    <!-- Experience / Timeline Section -->
+    <section id="experience" class="timeline-section section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Journey & <span>Experience</span></h2>
+                <p>My academic and professional background in the tech industry.</p>
+            </div>
+            <div class="timeline reveal delay-1">
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"><i class="fas fa-briefcase"></i></div>
+                    <div class="timeline-content glass-card">
+                        <span class="date">Current</span>
+                        <h3>Freelance Technical & Hardware Support</h3>
+                        <h4>Self-Employed</h4>
+                        <p>Perform mobile device diagnostics, firmware flashing, and software repairs using specialized utility tools. Assist clients with PC hardware upgrades, compatibility checks, and OS installations.</p>
+                    </div>
+                </div>
 
-        <ol class="timeline">
-          <li class="timeline-item timeline-item--education" data-reveal="left">
-            <span class="timeline-marker" aria-hidden="true"><svg class="icon"><use href="#i-cap"/></svg></span>
-            <div class="timeline-card glass">
-              <p class="timeline-meta">Education | Expected 2028</p>
-              <h3>Bachelor of Science in Information Technology</h3>
-              <p class="timeline-org">Kings College of the Philippines</p>
-              <p>Relevant coursework: Database Management Systems, Web Development, Object-Oriented Programming, Multimedia Systems, and Information Security &amp; Risk Management.</p>
-            </div>
-          </li>
+                <div class="timeline-item">
+                    <div class="timeline-dot"><i class="fas fa-code-branch"></i></div>
+                    <div class="timeline-content glass-card">
+                        <span class="date">Ongoing</span>
+                        <h3>Student Web & Software Developer</h3>
+                        <h4>Academic & Independent Projects</h4>
+                        <p>Built, tested, and maintained responsive web apps and desktop GUI systems. Designed relational databases, wrote backend CRUD operations, and handled frontend integrations.</p>
+                    </div>
+                </div>
 
-          <li class="timeline-item timeline-item--work" data-reveal="right">
-            <span class="timeline-marker" aria-hidden="true"><svg class="icon"><use href="#i-briefcase"/></svg></span>
-            <div class="timeline-card glass">
-              <p class="timeline-meta">Work experience | Ongoing</p>
-              <h3>Freelance Technical &amp; Hardware Support Specialist</h3>
-              <p class="timeline-org">Self-Employed</p>
-              <ul class="timeline-list">
-                <li>Performed mobile device diagnostics, firmware flashing, and software-level repairs using specialized utility tools and drivers.</li>
-                <li>Assisted clients with PC hardware upgrades, component compatibility checks, and operating system installations.</li>
-              </ul>
-            </div>
-          </li>
+                <div class="timeline-item">
+                    <div class="timeline-dot"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="timeline-content glass-card">
+                        <span class="date">Expected Graduation: 2028</span>
+                        <h3>BS in Information Technology</h3>
+                        <h4>Kings College of the Philippines</h4>
+                        <p>Focusing on Database Management Systems, Web Development, Object-Oriented Programming, Multimedia Systems, and Information Security.</p>
+                    </div>
+                </div>
 
-          <li class="timeline-item timeline-item--work" data-reveal="left">
-            <span class="timeline-marker" aria-hidden="true"><svg class="icon"><use href="#i-briefcase"/></svg></span>
-            <div class="timeline-card glass">
-              <p class="timeline-meta">Work experience | Coursework milestones</p>
-              <h3>Student Web &amp; Software Developer</h3>
-              <p class="timeline-org">Academic &amp; Independent Projects</p>
-              <ul class="timeline-list">
-                <li>Built, tested, and maintained responsive web applications and desktop GUI systems.</li>
-                <li>Designed relational databases, wrote backend CRUD operations, and handled frontend integration using PHP and MySQL.</li>
-              </ul>
+                <div class="timeline-item">
+                    <div class="timeline-dot"><i class="fas fa-certificate"></i></div>
+                    <div class="timeline-content glass-card">
+                        <span class="date">Achieved</span>
+                        <h3>Certifications & Awards</h3>
+                        <h4>Professional Milestones</h4>
+                        <p>Civil Service Exam Passer. Recognized as a Hackathon Champion for innovative problem-solving and rapid prototype development under pressure.</p>
+                    </div>
+                </div>
             </div>
-          </li>
-
-          <li class="timeline-item timeline-item--project" data-reveal="right">
-            <span class="timeline-marker" aria-hidden="true"><svg class="icon"><use href="#i-code"/></svg></span>
-            <div class="timeline-card glass">
-              <p class="timeline-meta">Major project</p>
-              <h3>Inventory &amp; Stock Management System</h3>
-              <p>Delivered real-time stock deductions, low-stock alerts, and an admin dashboard with sales and restock history.</p>
-            </div>
-          </li>
-
-          <li class="timeline-item timeline-item--project" data-reveal="left">
-            <span class="timeline-marker" aria-hidden="true"><svg class="icon"><use href="#i-code"/></svg></span>
-            <div class="timeline-card glass">
-              <p class="timeline-meta">Major project</p>
-              <h3>Restaurant POS &amp; Order Management</h3>
-              <p>Engineered a Windows desktop POS with role authentication, dynamic ordering, and automated billing backed by MySQL.</p>
-            </div>
-          </li>
-
-          <li class="timeline-item timeline-item--cert" data-reveal="right">
-            <span class="timeline-marker" aria-hidden="true"><svg class="icon"><use href="#i-award"/></svg></span>
-            <div class="timeline-card glass">
-              <p class="timeline-meta">Certification</p>
-              <h3>Civil Service Examination Passer</h3>
-              <p class="timeline-org">Civil Service Commission, Philippines</p>
-              <p>Qualified through the national civil service examination, demonstrating readiness for professional roles in public service.</p>
-            </div>
-          </li>
-
-          <li class="timeline-item timeline-item--cert" data-reveal="left">
-            <span class="timeline-marker" aria-hidden="true"><svg class="icon"><use href="#i-trophy"/></svg></span>
-            <div class="timeline-card glass">
-              <p class="timeline-meta">Achievement</p>
-              <h3>Hackathon Champion</h3>
-              <p>Won first place by turning a team idea into a working prototype under tight time limits.</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ============ CONTACT ============ -->
-    <section class="section" id="contact" aria-labelledby="contact-title">
-      <div class="container">
-        <header class="section-head" data-reveal="up">
-          <h2 class="section-title" id="contact-title">Contact</h2>
-          <p class="section-lead">Have a project, a device that won't boot, or a role to fill? Send a message.</p>
-        </header>
-
-        <div class="contact-grid">
-          <div class="contact-info" data-reveal="left">
-            <ul class="contact-list">
-              <li class="contact-item glass">
-                <span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span>
-                <div><p class="contact-label">Email</p><a href="mailto:ryuuflores2006@gmail.com">ryuuflores2006@gmail.com</a></div>
-              </li>
-              <li class="contact-item glass">
-                <span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span>
-                <div><p class="contact-label">Phone</p><a href="tel:+639460086428">0946 008 6428</a></div>
-              </li>
-              <li class="contact-item glass">
-                <span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span>
-                <div><p class="contact-label">Location</p><p>Dullao, Bambang, Nueva Vizcaya</p></div>
-              </li>
-            </ul>
-            <ul class="social-list" aria-label="Social media">
-              <li><a class="social-link" href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in a new tab)"><svg class="icon icon--solid" aria-hidden="true"><use href="#i-github"/></svg></a></li>
-              <li><a class="social-link" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)"><svg class="icon icon--solid" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
-              <li><a class="social-link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in a new tab)"><svg class="icon icon--solid" aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
-            </ul>
-          </div>
-
-          <form class="contact-form glass" id="contact-form" novalidate data-reveal="right">
-            <div class="field">
-              <label for="name">Name</label>
-              <input id="name" name="name" type="text" autocomplete="name" placeholder="Your full name" required aria-describedby="name-error">
-              <p class="field-error" id="name-error" role="alert"></p>
-            </div>
-            <div class="field">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="email-error">
-              <p class="field-error" id="email-error" role="alert"></p>
-            </div>
-            <div class="field">
-              <label for="subject">Subject</label>
-              <input id="subject" name="subject" type="text" placeholder="What is this about?" required aria-describedby="subject-error">
-              <p class="field-error" id="subject-error" role="alert"></p>
-            </div>
-            <div class="field">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or request" required aria-describedby="message-error"></textarea>
-              <p class="field-error" id="message-error" role="alert"></p>
-            </div>
-            <button class="btn btn--primary btn--block" type="submit">Send Message</button>
-          </form>
         </div>
-      </div>
     </section>
-  </main>
 
-  <!-- ============ FOOTER ============ -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <a class="brand" href="#home" aria-label="Mark John Flores, back to top">
-          <span class="brand-mark" aria-hidden="true">MJ</span>
-          <span class="brand-name">Flores, Mark John</span>
-        </a>
-        <p>IT Specialist building clean, maintainable systems and keeping the hardware behind them running.</p>
-      </div>
-      <ul class="social-list" aria-label="Social media">
-        <li><a class="social-link" href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in a new tab)"><svg class="icon icon--solid" aria-hidden="true"><use href="#i-github"/></svg></a></li>
-        <li><a class="social-link" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)"><svg class="icon icon--solid" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
-        <li><a class="social-link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in a new tab)"><svg class="icon icon--solid" aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
-        <li><a class="social-link" href="mailto:ryuuflores2006@gmail.com" aria-label="Send an email"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></a></li>
-      </ul>
-    </div>
-    <div class="container footer-bottom">
-      <p>&copy; <span id="year">2026</span> Mark John Flores. All rights reserved.</p>
-      <button class="btn btn--small btn--ghost" type="button" data-back-to-top>
-        <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"/></svg>Back to top
-      </button>
-    </div>
-  </footer>
+    <!-- Contact Section -->
+    <section id="contact" class="contact section bg-alt">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Get In <span>Touch</span></h2>
+                <p>Have a project in mind or need technical support? Let's talk.</p>
+            </div>
+            <div class="contact-wrapper grid-2 reveal delay-1">
+                <div class="contact-info">
+                    <div class="info-card glass-card">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email Me</h3>
+                            <p>ryuuflores2006@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-card glass-card">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Call Me</h3>
+                            <p>09460086428</p>
+                        </div>
+                    </div>
+                    <div class="info-card glass-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Dullao, Bambang, Nueva Vizcaya</p>
+                        </div>
+                    </div>
+                </div>
 
-  <button class="to-top" id="to-top" type="button" aria-label="Back to top" data-back-to-top>
-    <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"/></svg>
-  </button>
+                <form id="contact-form" class="contact-form glass-card">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">
+                        <span>Send Message</span> <i class="fas fa-paper-plane"></i>
+                    </button>
+                    <div id="form-message" class="form-message"></div>
+                </form>
+            </div>
+        </div>
+    </section>
 
-  <div class="toast-region" id="toast-region" role="status" aria-live="polite"></div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>MJ<span>.Flores</span></h2>
+                    <p>IT Specialist & Developer</p>
+                </div>
+                <div class="footer-socials">
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mark John Flores. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
